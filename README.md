@@ -32,10 +32,10 @@ This project is a **College Enquiry Chatbot** designed to help students get quic
 
 ## Team Members
 - Muskaan Yadav
-- [Member 2 Name]
-- [Member 3 Name]
-- [Member 4 Name]
+- Abhishek Yadav
+- Tawishi Sharma
 
 ## Deployment
 The chatbot is deployed and running at:  
 [Live Chatbot Link](https://muskaanyadav10.pythonanywhere.com/)
+
