@@ -22,10 +22,20 @@ This project is a **College Enquiry Chatbot** designed to help students get quic
 
 ## How to Run
 1. Open the project folder.
-2. Open `index.html` in a modern web browser (Chrome, Edge, Firefox).
+2. Open `index.html` in a modern web browser (Chrome, Edge, Firefox). edit space 
 3. Type your query in the chatbot input box to see responses.
 
 ## Future Enhancements
 - Integrate AI/NLP for dynamic responses
 - Add voice input and output
 - Connect to college database for real-time updates
+
+## Team Members
+- Muskaan Yadav
+- [Member 2 Name]
+- [Member 3 Name]
+- [Member 4 Name]
+
+## Deployment
+The chatbot is deployed and running at:  
+[Live Chatbot Link](https://muskaanyadav10.pythonanywhere.com/)
