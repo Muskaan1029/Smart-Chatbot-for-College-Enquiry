@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>College Enquiry Chatbot</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+
+<!-- HEADER -->
+<div class="header">
+    Apex University Enquiry Chatbot
+</div>
+
+<!-- CHAT AREA -->
+<div class="chat-container" id="chat">
+    <div class="bot-message">
+        <span class="bot-icon">🤖</span>
+        <div class="message">
+            Hello! Welcome to Apex University.<br>
+            You can ask about:
+            <ul>
+                <li>Courses</li>
+                <li>Admission</li>
+                <li>Fees</li>
+                <li>Contact details</li>
+                <li>Hostel facilities</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!-- INPUT AREA -->
+<div class="input-area">
+    <input type="text" id="userInput" placeholder="Type your message...">
+    <button onclick="sendMessage()">➤</button>
+</div>
+
+<script>
+function sendMessage() {
+    let userText = $("#userInput").val();
+    if(userText === "") return;
+
+    $("#chat").append(`
+        <div class="user-message">
+            <div class="message">${userText}</div>
+        </div>
+    `);
+
+    $.post("/get", { msg: userText }).done(function(data) {
+        $("#chat").append(`
+            <div class="bot-message">
+                <span class="bot-icon">🤖</span>
+                <div class="message">${data}</div>
+            </div>
+        `);
+
+        $("#chat").scrollTop($("#chat")[0].scrollHeight);
+    });
+
+    $("#userInput").val("");
+}
+</script>
+
+</body>
+</html>
